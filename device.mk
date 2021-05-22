@@ -87,6 +87,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NfcNci
 
+# Prebuilds
+PRODUCT_PACKAGES += \
+    Gcamgo
+
 # RcsService
 PRODUCT_PACKAGES += \
     RcsService
