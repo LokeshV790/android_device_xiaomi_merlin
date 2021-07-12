@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-   $(LOCAL_DIR)/aosp_merlin.mk
+   $(LOCAL_DIR)/dot_merlin.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_merlin-user \
-    aosp_merlin-userdebug \
-    aosp_merlin-eng
+    dot_merlin-user \
+    dot_merlin-userdebug \
+    dot_merlin-eng
