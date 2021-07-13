@@ -40,6 +40,7 @@ PRODUCT_DEVICE := merlin
 PRODUCT_NAME := dot_merlin
 PRODUCT_BRAND := Redmi
 PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_MODEL := Redmi Note 9 / Redmi 10X
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_VENDOR := xiaomi
