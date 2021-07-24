@@ -1,11 +1,6 @@
 on init
     setprop sys.usb.ffs.aio_compat 1
     
-    # Custom overrides that need to happen right on boot
-    # Override vendor fstab
-    # We only need it to be overridden before things are mounted
-    mount none /system/etc/fstab.mt6768 /vendor/etc/fstab.mt6768 bind
-    
     # Disable vendor overlay
     mount none /vendor/lost+found /vendor/overlay bind
     
@@ -50,12 +45,6 @@ on fs
     mount_all /vendor/etc/fstab.mt6768 --late
 
 on post-fs
-    # Unmount the overridden fstab because the SELinux label is incorrect
-    # and some MTK daemons can crash because of that
-    # (at post-fs, the fstab has already been used to mount the partitions,
-    #  so it is fine to just revert back)
-    umount /vendor/etc/fstab.mt6768
-
     # Disable OEM Lights 
     mount none /dev/null vendor/lib/hw/lights.mt6768.so bind
     mount none /dev/null vendor/lib/hw/android.hardware.light@2.0-impl-mediatek.so bind
